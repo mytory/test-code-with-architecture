@@ -1,12 +1,10 @@
-package com.example.demo.repository;
+package com.example.demo.user.infrastructure;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 import com.example.demo.user.domain.UserStatus;
 import java.util.Optional;
 
-import com.example.demo.user.infrastructure.UserEntity;
-import com.example.demo.user.infrastructure.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
