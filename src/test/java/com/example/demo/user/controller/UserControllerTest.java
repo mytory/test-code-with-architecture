@@ -35,7 +35,7 @@ public class UserControllerTest {
     @Autowired
     private MockMvc mockMvc;
     @Autowired
-    private UserJpaRepository userRepository;
+    private UserJpaRepository userJpaRepository;
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     @Test
@@ -71,7 +71,7 @@ public class UserControllerTest {
             get("/api/users/2/verify")
                 .queryParam("certificationCode", "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaab"))
             .andExpect(status().isFound());
-        UserEntity userEntity = userRepository.findById(1L).get();
+        UserEntity userEntity = userJpaRepository.findById(1L).get();
         assertThat(userEntity.getStatus()).isEqualTo(UserStatus.ACTIVE);
     }
 

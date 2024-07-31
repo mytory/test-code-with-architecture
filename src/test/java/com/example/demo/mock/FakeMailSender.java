@@ -1,10 +1,8 @@
-package com.example.demo.user.infrastructure;
+package com.example.demo.mock;
 
 import com.example.demo.user.service.port.MailSender;
-import org.springframework.stereotype.Component;
 
 @SuppressWarnings("FieldCanBeLocal")
-@Component
 public class FakeMailSender implements MailSender {
 
     public String email;
