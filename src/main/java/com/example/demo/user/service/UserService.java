@@ -1,5 +1,7 @@
 package com.example.demo.user.service;
 
+import com.example.demo.common.infrastructure.SystemClockHolder;
+import com.example.demo.common.infrastructure.SystemUuidHolder;
 import com.example.demo.user.exception.CertificationCodeNotMatchedException;
 import com.example.demo.user.exception.ResourceNotFoundException;
 import com.example.demo.user.domain.UserStatus;
@@ -20,6 +22,8 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final CertificationService certificationService;
+    private final SystemUuidHolder systemUuidHolder;
+    private final SystemClockHolder systemClockHolder;
 
 
     public User getByEmail(String email) {
@@ -34,7 +38,7 @@ public class UserService {
 
     @Transactional
     public User create(UserCreate userCreate) {
-        User user = User.from(userCreate);
+        User user = User.from(userCreate, systemUuidHolder);
         user = userRepository.save(user);
         certificationService.send(user.getEmail(), user.getId(), user.getCertificationCode());
         return user;
@@ -50,7 +54,7 @@ public class UserService {
     @Transactional
     public void login(long id) {
         User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Users", id));
-        user = user.login();
+        user = user.login(systemClockHolder);
         userRepository.save(user);
     }
 
