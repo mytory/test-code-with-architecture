@@ -35,7 +35,6 @@ public class FakeUserRepository implements UserRepository {
                 .findFirst();
     }
 
-    @Override
     public Optional<User> getById(long writerId) {
         return findByIdAndStatus(writerId, UserStatus.ACTIVE);
     }

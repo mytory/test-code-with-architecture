@@ -13,12 +13,10 @@ public class FakePostRepository implements PostRepository {
     private final AtomicLong autoIncrementId = new AtomicLong(1);
     private final List<Post> data = new ArrayList<>();
 
-    @Override
     public Optional<Post> findById(long id) {
         return data.stream().filter(post -> post.getId() == id).findFirst();
     }
 
-    @Override
     public Post save(Post post) {
         data.stream().filter(item -> item.getId() == post.getId()).findFirst().ifPresent(data::remove);
 
