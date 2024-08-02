@@ -6,10 +6,12 @@ import com.example.demo.common.service.port.UuidHolder;
 import com.example.demo.user.exception.CertificationCodeNotMatchedException;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.time.Clock;
 import java.util.UUID;
 
+@ToString
 @Getter
 public class User {
 
