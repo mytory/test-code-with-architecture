@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -34,6 +33,11 @@ public class FakeUserRepository implements UserRepository {
         return data.stream()
                 .filter(user -> user.getId() == id)
                 .findFirst();
+    }
+
+    @Override
+    public Optional<User> getById(long writerId) {
+        return findByIdAndStatus(writerId, UserStatus.ACTIVE);
     }
 
     public User save(User user) {
