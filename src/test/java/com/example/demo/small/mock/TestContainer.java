@@ -3,6 +3,7 @@ package com.example.demo.small.mock;
 import com.example.demo.common.service.port.ClockHolder;
 import com.example.demo.common.service.port.UuidHolder;
 import com.example.demo.post.controller.PostController;
+import com.example.demo.post.controller.PostCreateController;
 import com.example.demo.post.service.PostService;
 import com.example.demo.post.service.port.PostRepository;
 import com.example.demo.user.controller.UserController;
@@ -20,6 +21,7 @@ public class TestContainer {
     public final UserController userController;
     public final UserCreateController userCreateController;
     public final PostController postController;
+    public final PostCreateController postCreateController;
     public final MailSender mailSender;
 
     public TestContainer(UuidHolder uuidHolder, ClockHolder clockHolder) {
@@ -40,5 +42,7 @@ public class TestContainer {
         userController = new UserController(userService);
         userCreateController = new UserCreateController(userController, userService);
         postController = new PostController(postService);
+        postCreateController = new PostCreateController(postService);
+
     }
 }
