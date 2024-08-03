@@ -4,7 +4,6 @@ import com.example.demo.user.controller.response.MyProfileResponse;
 import com.example.demo.user.controller.response.UserResponse;
 import com.example.demo.user.domain.User;
 import com.example.demo.user.domain.UserUpdate;
-import com.example.demo.user.infrastructure.UserEntity;
 import com.example.demo.user.service.UserService;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
@@ -33,7 +32,7 @@ public class UserController {
 
     @ResponseStatus
     @GetMapping("/{id}")
-    public ResponseEntity<UserResponse> getUserById(@PathVariable long id) {
+    public ResponseEntity<UserResponse> getById(@PathVariable long id) {
         return ResponseEntity
             .ok()
             .body(toResponse(userService.getById(id)));
