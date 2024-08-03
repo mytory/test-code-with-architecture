@@ -126,7 +126,13 @@ public class UserControllerTest {
                 .build();
 
         // when
-        this.testContainer.userController.updateMyInfo("kok202@naver.com", userUpdate);
+        ResponseEntity<MyProfileResponse> result = this.testContainer.userController.updateMyInfo("kok202@naver.com", userUpdate);
+        MyProfileResponse myProfileResponse = result.getBody();
+        assert myProfileResponse != null;
+        assertThat(myProfileResponse.getNickname()).isEqualTo("kok202-n");
+        assertThat(myProfileResponse.getAddress()).isEqualTo("Pangyo");
+
+        // then
         User user = this.testContainer.userService.getByEmail("kok202@naver.com");
         assertThat(user.getId()).isEqualTo(1);
         assertThat(user.getEmail()).isEqualTo("kok202@naver.com");
