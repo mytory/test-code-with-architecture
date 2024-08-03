@@ -40,7 +40,7 @@ public class TestContainer {
                 .build();
 
         userController = new UserController(userService);
-        userCreateController = new UserCreateController(userController, userService);
+        userCreateController = new UserCreateController(userService);
         postController = new PostController(postService);
         postCreateController = new PostCreateController(postService);
 
