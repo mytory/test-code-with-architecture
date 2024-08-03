@@ -6,6 +6,7 @@ import com.example.demo.post.controller.PostController;
 import com.example.demo.post.service.PostService;
 import com.example.demo.post.service.port.PostRepository;
 import com.example.demo.user.controller.UserController;
+import com.example.demo.user.controller.UserCreateController;
 import com.example.demo.user.service.CertificationService;
 import com.example.demo.user.service.UserService;
 import com.example.demo.user.service.port.MailSender;
@@ -17,6 +18,7 @@ public class TestContainer {
     public final UserService userService;
     public final PostService postService;
     public final UserController userController;
+    public final UserCreateController userCreateController;
     public final PostController postController;
     public final MailSender mailSender;
 
@@ -36,6 +38,7 @@ public class TestContainer {
                 .build();
 
         userController = new UserController(userService);
+        userCreateController = new UserCreateController(userController, userService);
         postController = new PostController(postService);
     }
 }
