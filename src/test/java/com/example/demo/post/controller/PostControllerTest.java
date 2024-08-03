@@ -1,11 +1,11 @@
-package com.example.demo.small.post.controller;
+package com.example.demo.post.controller;
 
+import com.example.demo.mock.TestClockHolder;
+import com.example.demo.mock.TestUuidHolder;
 import com.example.demo.post.controller.response.PostResponse;
 import com.example.demo.post.domain.Post;
 import com.example.demo.post.domain.PostUpdate;
-import com.example.demo.small.mock.TestClockHolder;
-import com.example.demo.small.mock.TestContainer;
-import com.example.demo.small.mock.TestUuidHolder;
+import com.example.demo.mock.TestContainer;
 import com.example.demo.user.domain.User;
 import com.example.demo.user.domain.UserStatus;
 import com.example.demo.user.exception.ResourceNotFoundException;

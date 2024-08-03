@@ -1,17 +1,15 @@
-package com.example.demo.small.user.service;
+package com.example.demo.user.service;
 
-import com.example.demo.small.mock.FakeMailSender;
-import com.example.demo.small.mock.FakeUserRepository;
-import com.example.demo.small.mock.TestClockHolder;
-import com.example.demo.small.mock.TestUuidHolder;
+import com.example.demo.mock.FakeMailSender;
+import com.example.demo.mock.TestClockHolder;
+import com.example.demo.mock.TestUuidHolder;
+import com.example.demo.mock.FakeUserRepository;
 import com.example.demo.user.domain.User;
 import com.example.demo.user.domain.UserCreate;
 import com.example.demo.user.domain.UserStatus;
 import com.example.demo.user.domain.UserUpdate;
 import com.example.demo.user.exception.CertificationCodeNotMatchedException;
 import com.example.demo.user.exception.ResourceNotFoundException;
-import com.example.demo.user.service.CertificationService;
-import com.example.demo.user.service.UserService;
 import com.example.demo.user.service.port.MailSender;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,8 +1,8 @@
-package com.example.demo.small.user.controller;
+package com.example.demo.user.controller;
 
-import com.example.demo.small.mock.TestClockHolder;
-import com.example.demo.small.mock.TestContainer;
-import com.example.demo.small.mock.TestUuidHolder;
+import com.example.demo.mock.TestClockHolder;
+import com.example.demo.mock.TestUuidHolder;
+import com.example.demo.mock.TestContainer;
 import com.example.demo.user.controller.response.MyProfileResponse;
 import com.example.demo.user.controller.response.UserResponse;
 import com.example.demo.user.domain.User;

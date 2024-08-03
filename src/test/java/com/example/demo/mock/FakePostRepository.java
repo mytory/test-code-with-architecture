@@ -1,4 +1,4 @@
-package com.example.demo.small.mock;
+package com.example.demo.mock;
 
 import com.example.demo.post.domain.Post;
 import com.example.demo.post.service.port.PostRepository;

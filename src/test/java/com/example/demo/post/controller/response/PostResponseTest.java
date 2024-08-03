@@ -1,4 +1,4 @@
-package com.example.demo.small.post.controller.response;
+package com.example.demo.post.controller.response;
 
 import com.example.demo.post.controller.response.PostResponse;
 import com.example.demo.post.domain.Post;

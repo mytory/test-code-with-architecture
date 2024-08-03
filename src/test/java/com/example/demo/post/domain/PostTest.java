@@ -1,4 +1,4 @@
-package com.example.demo.small.post.domain;
+package com.example.demo.post.domain;
 
 import com.example.demo.post.domain.Post;
 import com.example.demo.post.domain.PostCreate;

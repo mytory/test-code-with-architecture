@@ -1,22 +1,20 @@
-package com.example.demo.small.post.controller;
+package com.example.demo.post.controller;
 
+import com.example.demo.mock.TestClockHolder;
+import com.example.demo.mock.TestUuidHolder;
 import com.example.demo.post.controller.response.PostResponse;
 import com.example.demo.post.domain.PostCreate;
-import com.example.demo.small.mock.TestClockHolder;
-import com.example.demo.small.mock.TestContainer;
-import com.example.demo.small.mock.TestUuidHolder;
+import com.example.demo.mock.TestContainer;
 import com.example.demo.user.domain.User;
 import com.example.demo.user.domain.UserStatus;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatusCode;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 public class PostCreateControllerTest {
 

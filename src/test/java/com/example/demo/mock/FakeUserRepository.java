@@ -1,4 +1,4 @@
-package com.example.demo.small.mock;
+package com.example.demo.mock;
 
 import com.example.demo.user.domain.User;
 import com.example.demo.user.domain.UserStatus;

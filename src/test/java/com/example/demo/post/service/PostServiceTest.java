@@ -1,11 +1,10 @@
-package com.example.demo.small.post.service;
+package com.example.demo.post.service;
 
-import com.example.demo.small.mock.FakePostRepository;
-import com.example.demo.small.mock.FakeUserRepository;
+import com.example.demo.mock.FakePostRepository;
+import com.example.demo.mock.FakeUserRepository;
 import com.example.demo.post.domain.Post;
 import com.example.demo.post.domain.PostCreate;
 import com.example.demo.post.domain.PostUpdate;
-import com.example.demo.post.service.PostService;
 import com.example.demo.user.domain.User;
 import com.example.demo.user.domain.UserStatus;
 import org.junit.jupiter.api.BeforeEach;

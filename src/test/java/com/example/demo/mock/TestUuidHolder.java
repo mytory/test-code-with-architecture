@@ -1,4 +1,4 @@
-package com.example.demo.small.mock;
+package com.example.demo.mock;
 
 import com.example.demo.common.service.port.UuidHolder;
 
