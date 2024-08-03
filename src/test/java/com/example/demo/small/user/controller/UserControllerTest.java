@@ -1,4 +1,4 @@
-package com.example.demo.small.controller;
+package com.example.demo.small.user.controller;
 
 import com.example.demo.small.mock.TestClockHolder;
 import com.example.demo.small.mock.TestContainer;
